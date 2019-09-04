@@ -14,7 +14,6 @@ public class Main {
 
         LifeWorld world = new LifeWorld(10, 10);
         world.randomize();
-        // TODO 12: изначально мир должен быть случайным - вызовите соответствующий метод у world
 
         JFrame frame = new JFrame();
 
@@ -44,7 +43,7 @@ public class Main {
         //Thread.sleep(3000);
 
         while (true) {
-            Thread.sleep(1);
+            Thread.sleep(300);
             if (!pauseListener.getPaused()) {
                 panel.repaint();
                 world.updateWorld();

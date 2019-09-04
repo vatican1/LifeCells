@@ -23,7 +23,6 @@ public class MyThread extends Thread {
         for (int y = 0; y < height; ++y) {
             for (int x = 0; x < width; ++x) {
                 int neighboursAlive = 0;
-                // TODO 2: посчитайте сколько соседей вокруг клетки (x, y) живы
                 for (int dx = -1; dx <= 1; ++dx) {
                     for (int dy = -1; dy <= 1; ++dy) {
                         if (dx==0&&dy==0){
@@ -39,7 +38,6 @@ public class MyThread extends Thread {
 
                     }
                 }
-                // TODO 3: обновите состояние в НОВЫЙ момент времени (т.е. в nextState) для клетки отталкиваясь от правил игры «Жизнь» (и того сколько соседей были живы, т.е. учитывая neighboursAlive)
                 if (cells[x][y]==CellState.ALIVE) {
                     if (neighboursAlive == 2 || neighboursAlive == 3) {
                         nextState[x][y] = CellState.ALIVE;

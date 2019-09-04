@@ -21,7 +21,5 @@ public class PauseListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         paused=!paused;
-        // TODO 21: добавить возможность ставить игру на паузу
-
     }
 }
